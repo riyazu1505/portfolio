@@ -4,6 +4,13 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import common from './mixins/common'
+
+// mixins
+const mixins = { common }
+Object.keys(mixins).forEach(key => {
+  Vue.mixin(mixins[key])
+})
 
 Vue.config.productionTip = false
 
